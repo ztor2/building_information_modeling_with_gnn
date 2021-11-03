@@ -1,4 +1,8 @@
-# building_information_modeling_with_gnn
+# Bullding Information Modeling Improvement with Graph Convolution Networks
+<br>그래프 합성곱 신경망을 이용한 건물 정보 모델링 정확도 향상.<br>
 
+<br>
 
-## test
+### 연구 배경 및 목적
+- 이 저장소의 코드는 한국연구재단 주관의 <2020년 중견연구 신규과제 유형1-1>에서 서울과학기술대학교 건설시스템공학과와 서울과학기술대학교 데이터사이언스학과가 협력 수행 중인 '3차원 딥러닝과 확률그래프모형을 이용한 건축 BIM 모델 부재·공간 정합성 검토 및 지능적 부재 추천 시스템 개발' 프로젝트의 일부이다.
+- 이 프로젝트에서는 
