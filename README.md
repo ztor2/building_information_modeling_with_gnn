@@ -1,5 +1,5 @@
-# Bullding Information Modeling with Graph Convolution Networks
-<br>그래프 합성곱 신경망을 이용한 건물 정보 모델링 정합성 검토.<br>
+# Bullding Information Modeling with Graph Neural Networks
+<br>그래프 신경망을 이용한 건물 정보 모델링 정합성 검토.<br>
 
 <br>
 
@@ -40,7 +40,7 @@
 **learning_curve.ipynb:** GCN 수행 후 정확도 및 loss 결과를 이용해 learning curve plot을 그려 학습 양상을 확인한다.<br>
 **space_preprocessing.ipynb:** 공간 데이터 전처리 코드 파일로, 공간-부재 정보로부터 인접 행렬을 구축하고 공간 특성 정보를 전처리해 각각 sparse matrix로 변환 후 pickle 형식 파일로 저장한다.<br>
 **space_adj.csv:** 공간-부재 인접 관계가 edgelist 형태로 저장된 raw 데이터.<br>
-**space_feat.csv:** 공간의 특성 정보 raw 데이터. 10개의 측정치 등의 특성이 포함된다.<br>
+**space_feat.csv:** 공간의 특성 정보 raw 데이터. 10개의 측정이 특성이 포함된다.<br>
 **space.graph.jac / space.graph.cos:** 전처리를 거쳐 저장된 공간-공간 인접 행렬. space.graph.jac 파일은 Jaccard 유사도가 사용되었고, space.graph.cos 파일은 cosine 유사도가 사용되었다.<br>
 **space.feature:** 전처리를 거쳐 저장된 공간 특성 정보.<br>
 **space.labels:** 전처리를 거쳐 저장된 공간의 label 정보.<br>
@@ -48,7 +48,29 @@
 
 <br>
 
+### 실험 세부 설정
+- **GCN:** 2-layer GCN, 32 hidden units, 200 epochs, learning rate=0.5 with Adam optimizer. weight decay=0.005, dropout=0.5.
+- **Baselines(logistic regression, MLP, SVM):** Mostly used default setting of scikit learn. one-vs-rest setting in logistic regressin, 32 hidden units in MLP.
+
+<br>
+
 ### 실험 결과
 
+- GCN과 인접정보를 함께 이용했을 때에, 특성 정보만 활용한 분류 모델보다 큰 폭의 성능 향상을 보였다.
+- 또한, 일반 분류 모델에서는 훈련셋 비율이 높아질수록 과적합으로 추정되는 원인에 의해 성능이 낮아지는 것이 관찰되지만, GCN은 훈련셋 비율이 높아져도 비교적 높은 성능을 유지했다.
+- Learning curve에서는 안정적인 학습 양상이 관찰된다. 
 
+<br>
+
+<p align="center"> <img src="https://i.esdrop.com/d/fha5flk1blzo/NKjpjzcy7u.PNG" width="70%" align="center"> </p>
+<p align="center">  <b> 그림 2. </b> GCN을 이용한 공간 분류 결과. </p>
+
+<br>
+
+<p align="center"> <img src="https://i.esdrop.com/d/fha5flk1blzo/HUbxIa9jte.PNG" width="40%" align="center"> </p>
+<p align="center">  <b> 그림 3. </b> GCN을 이용한 공간 분류 learning curve. </p>
+
+<br>
+
+### 주요 참고 문헌
 
