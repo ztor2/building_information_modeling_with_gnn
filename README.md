@@ -71,6 +71,3 @@
 <p align="center">  <b> 그림 3. </b> GCN을 이용한 공간 분류 learning curve. </p>
 
 <br>
-
-### 주요 참고 문헌
-
