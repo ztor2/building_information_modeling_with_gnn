@@ -26,8 +26,8 @@
 <br>
 
 ### 코드 파일 설명
-- **GCN 모델 파트**<br>
 
+#### **GCN 모델 파트**
 - **GCN.ipynb:** 추출된 공간 간 인접 정보와 공간의 특성 정보를 이용해 GCN을 수행하고, 정확도와 precision/recall 결과, confusion matrix를 확인한다.<br>
 - **GCN_iter.ipynb:** GCN을 지정한 횟수만큼 반복해서 수행하고 모든 결과를 저장한다.<br>
 - **model.py:** GCN 수행에 필요한 GCN 모델 및 layer 함수를 포함한다.<br>
@@ -35,8 +35,7 @@
 
 <br>
 
-- **데이터 및 기타 파트**<br>
-
+#### **데이터 및 기타 파트**
 - **learning_curve.ipynb:** GCN 수행 후 정확도 및 loss 결과를 이용해 learning curve plot을 그려 학습 양상을 확인한다.<br>
 - **space_preprocessing.ipynb:** 공간 데이터 전처리 코드 파일로, 공간-부재 정보로부터 인접 행렬을 구축하고 공간 특성 정보를 전처리해 각각 sparse matrix로 변환 후 pickle 형식 파일로 저장한다.<br>
 - **space_adj.csv:** 공간-부재 인접 관계가 edgelist 형태로 저장된 raw 데이터.<br>
