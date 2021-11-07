@@ -44,9 +44,9 @@
 - **space_preprocessing.ipynb:** 공간 데이터 전처리 코드 파일로, 공간-부재 정보로부터 인접 행렬을 구축하고 공간 특성 정보를 전처리해 각각 sparse matrix로 변환 후 pickle 형식 파일로 저장한다.<br>
 - **space_adj.csv:** 공간-부재 인접 관계가 edgelist 형태로 저장된 raw 데이터.<br>
 - **space_feat.csv:** 공간의 특성 정보 raw 데이터. 10개의 특성이 포함된다.<br>
-- **space.graph.jac / space.graph.cos:** 전처리를 거쳐 저장된 공간-공간 인접 행렬. space.graph.jac 파일은 Jaccard 유사도가 사용되었고, space.graph.cos 파일은 cosine 유사도가 사용되었다.<br>
-- **space.feature:** 전처리를 거쳐 저장된 공간 특성 정보.<br>
-- **space.labels:** 전처리를 거쳐 저장된 공간의 label 정보.<br>
+- **space.graph.jac / space.graph.cos:** 전처리를 거쳐 저장된 공간-공간 인접 행렬 데이터(pickle 형식 파일). space.graph.jac 파일은 Jaccard 유사도가 사용되었고, space.graph.cos 파일은 cosine 유사도가 사용되었다.<br>
+- **space.feature:** 전처리를 거쳐 저장된 공간 특성 정보 데이터(pickle 형식 파일). <br>
+- **space.labels:** 전처리를 거쳐 저장된 공간의 label 정보 데이터(pickle 형식 파일). <br>
 - **train_accs.pkl, train_losses.pkl, val_accs.pkl, val_losses.pkl:** learning curve를 그리기 위해 저장된 정확도 및 loss 정보가 pickle 형식 파일.
 
 <br>
