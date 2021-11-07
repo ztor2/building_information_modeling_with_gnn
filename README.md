@@ -27,6 +27,8 @@
 
 ### 코드 파일 설명
 
+- 이 실험은 pytorch 1.9.0 버전, cuda는 10.2 또는 11.1 버전, scikit-learn은 0.24.2 버전에서 수행되었다.
+
 #### **GCN 모델 파트**
 - **GCN.ipynb:** 추출된 공간 간 인접 정보와 공간의 특성 정보를 이용해 GCN을 수행하고, 정확도와 precision/recall 결과, confusion matrix를 확인한다.<br>
 - **GCN_iter.ipynb:** GCN을 지정한 횟수만큼 반복해서 수행하고 모든 결과를 저장한다.<br>
